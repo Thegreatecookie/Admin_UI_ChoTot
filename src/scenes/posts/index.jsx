@@ -11,19 +11,20 @@ import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 import DownloadRoundedIcon from "@mui/icons-material/DownloadRounded";
 
-import useScript from "./useScript.js";
-import Sidebar from "./SideBar.jsx";
-import OrderTable from "./OrderTable.jsx";
-import OrderList from "./OderList.jsx";
-import Header from "./Header.jsx";
+import useScript from "./useScript";
+import Sidebar from "../global/SideBar";
+import OrderTable from "./OrderTable";
+import OrderList from "./OderList";
+import Header from "../global/Header";
 
 const useEnhancedEffect =
   typeof window !== "undefined" ? React.useLayoutEffect : React.useEffect;
 
-export default function JoyOrderDashboardTemplate() {
+export default function Post() {
   const status = useScript(`https://unpkg.com/feather-icons`);
-  const feather = require("feather-icons");
+
   useEnhancedEffect(() => {
+    const feather = require("feather-icons");
     // Feather icon setup: https://github.com/feathericons/feather#4-replace
     // @ts-ignore
     if (typeof feather !== "undefined") {
@@ -104,14 +105,7 @@ export default function JoyOrderDashboardTemplate() {
               justifyContent: "space-between",
             }}
           >
-            <Typography level="h2">Orders</Typography>
-            <Button
-              color="primary"
-              startDecorator={<DownloadRoundedIcon />}
-              size="sm"
-            >
-              Download PDF
-            </Button>
+            <Typography level="h2">Bài đăng</Typography>
           </Box>
           <OrderTable />
           <OrderList />

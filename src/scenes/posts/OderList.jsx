@@ -1,28 +1,28 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import * as React from "react"
-import Box from "@mui/joy/Box"
-import Avatar from "@mui/joy/Avatar"
-import Chip from "@mui/joy/Chip"
-import Link from "@mui/joy/Link"
-import Divider from "@mui/joy/Divider"
-import IconButton from "@mui/joy/IconButton"
-import Typography from "@mui/joy/Typography"
-import List from "@mui/joy/List"
-import ListItem from "@mui/joy/ListItem"
-import ListItemContent from "@mui/joy/ListItemContent"
-import ListItemDecorator from "@mui/joy/ListItemDecorator"
-import ListDivider from "@mui/joy/ListDivider"
-import Menu from "@mui/joy/Menu"
-import MenuButton from "@mui/joy/MenuButton"
-import MenuItem from "@mui/joy/MenuItem"
-import Dropdown from "@mui/joy/Dropdown"
+import * as React from "react";
+import Box from "@mui/joy/Box";
+import Avatar from "@mui/joy/Avatar";
+import Chip from "@mui/joy/Chip";
+import Link from "@mui/joy/Link";
+import Divider from "@mui/joy/Divider";
+import IconButton from "@mui/joy/IconButton";
+import Typography from "@mui/joy/Typography";
+import List from "@mui/joy/List";
+import ListItem from "@mui/joy/ListItem";
+import ListItemContent from "@mui/joy/ListItemContent";
+import ListItemDecorator from "@mui/joy/ListItemDecorator";
+import ListDivider from "@mui/joy/ListDivider";
+import Menu from "@mui/joy/Menu";
+import MenuButton from "@mui/joy/MenuButton";
+import MenuItem from "@mui/joy/MenuItem";
+import Dropdown from "@mui/joy/Dropdown";
 // icons
-import MoreHorizRoundedIcon from "@mui/icons-material/MoreHorizRounded"
-import CheckRoundedIcon from "@mui/icons-material/CheckRounded"
-import BlockIcon from "@mui/icons-material/Block"
-import AutorenewRoundedIcon from "@mui/icons-material/AutorenewRounded"
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight"
-import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft"
+import MoreHorizRoundedIcon from "@mui/icons-material/MoreHorizRounded";
+import CheckRoundedIcon from "@mui/icons-material/CheckRounded";
+import BlockIcon from "@mui/icons-material/Block";
+import AutorenewRoundedIcon from "@mui/icons-material/AutorenewRounded";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 
 const listItems = [
   {
@@ -32,8 +32,8 @@ const listItems = [
     customer: {
       initial: "O",
       name: "Olivia Ryhe",
-      email: "olivia@email.com"
-    }
+      email: "olivia@email.com",
+    },
   },
   {
     id: "INV-1233",
@@ -42,8 +42,8 @@ const listItems = [
     customer: {
       initial: "S",
       name: "Steve Hampton",
-      email: "steve.hamp@email.com"
-    }
+      email: "steve.hamp@email.com",
+    },
   },
   {
     id: "INV-1232",
@@ -52,8 +52,8 @@ const listItems = [
     customer: {
       initial: "C",
       name: "Ciaran Murray",
-      email: "ciaran.murray@email.com"
-    }
+      email: "ciaran.murray@email.com",
+    },
   },
   {
     id: "INV-1231",
@@ -62,8 +62,8 @@ const listItems = [
     customer: {
       initial: "M",
       name: "Maria Macdonald",
-      email: "maria.mc@email.com"
-    }
+      email: "maria.mc@email.com",
+    },
   },
   {
     id: "INV-1230",
@@ -72,8 +72,8 @@ const listItems = [
     customer: {
       initial: "C",
       name: "Charles Fulton",
-      email: "fulton@email.com"
-    }
+      email: "fulton@email.com",
+    },
   },
   {
     id: "INV-1229",
@@ -82,10 +82,10 @@ const listItems = [
     customer: {
       initial: "J",
       name: "Jay Hooper",
-      email: "hooper@email.com"
-    }
-  }
-]
+      email: "hooper@email.com",
+    },
+  },
+];
 
 function RowMenu() {
   return (
@@ -104,25 +104,25 @@ function RowMenu() {
         <MenuItem color="danger">Delete</MenuItem>
       </Menu>
     </Dropdown>
-  )
+  );
 }
 
 export default function OrderList() {
   return (
     <Box sx={{ display: { xs: "block", sm: "none" } }}>
-      {listItems.map(listItem => (
+      {listItems.map((listItem) => (
         <List
           key={listItem.id}
           size="sm"
           sx={{
-            "--ListItem-paddingX": 0
+            "--ListItem-paddingX": 0,
           }}
         >
           <ListItem
             sx={{
               display: "flex",
               justifyContent: "space-between",
-              alignItems: "start"
+              alignItems: "start",
             }}
           >
             <ListItemContent
@@ -144,7 +144,7 @@ export default function OrderList() {
                     alignItems: "center",
                     justifyContent: "space-between",
                     gap: 0.5,
-                    mb: 1
+                    mb: 1,
                   }}
                 >
                   <Typography level="body-xs">{listItem.date}</Typography>
@@ -152,7 +152,7 @@ export default function OrderList() {
                   <Typography level="body-xs">{listItem.id}</Typography>
                 </Box>
                 <Box
-                  sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1 }}
+                  sx={{ display: "flex", alignItems: "start", gap: 1, mb: 1 }}
                 >
                   <Link level="body-sm" component="button">
                     Download
@@ -168,14 +168,14 @@ export default function OrderList() {
                 {
                   Paid: <CheckRoundedIcon />,
                   Refunded: <AutorenewRoundedIcon />,
-                  Cancelled: <BlockIcon />
+                  Cancelled: <BlockIcon />,
                 }[listItem.status]
               }
               color={
                 {
                   Paid: "success",
                   Refunded: "neutral",
-                  Cancelled: "danger"
+                  Cancelled: "danger",
                 }[listItem.status]
               }
             >
@@ -190,7 +190,7 @@ export default function OrderList() {
         sx={{
           display: { xs: "flex", md: "none" },
           alignItems: "center",
-          py: 2
+          py: 2,
         }}
       >
         <IconButton
@@ -214,5 +214,5 @@ export default function OrderList() {
         </IconButton>
       </Box>
     </Box>
-  )
+  );
 }

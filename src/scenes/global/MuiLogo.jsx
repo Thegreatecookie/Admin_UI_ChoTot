@@ -1,5 +1,5 @@
-import * as React from "react"
-import AspectRatio from "@mui/joy/AspectRatio"
+import * as React from "react";
+import AspectRatio from "@mui/joy/AspectRatio";
 
 export default function MuiLogo({ sx, ...props }) {
   return (
@@ -9,9 +9,9 @@ export default function MuiLogo({ sx, ...props }) {
       {...props}
       sx={[
         {
-          width: 36
+          width: 36,
         },
-        ...(Array.isArray(sx) ? sx : [sx])
+        ...(Array.isArray(sx) ? sx : [sx]),
       ]}
     >
       <div>
@@ -29,5 +29,5 @@ export default function MuiLogo({ sx, ...props }) {
         </svg>
       </div>
     </AspectRatio>
-  )
+  );
 }
