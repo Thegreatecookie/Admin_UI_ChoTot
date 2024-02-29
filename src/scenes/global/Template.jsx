@@ -1,14 +1,14 @@
 import { useState } from "react";
-import Sidebar from "./SideBar";
-import Topbar from "./Topbar";
+import Header from "./header";
 import { Outlet } from "react-router-dom";
 
 export function Template() {
-  const [isSidebar, setIsSidebar] = useState(true);
-
   return (
     <>
-      <Sidebar isSidebar={isSidebar} />
+      <main className="content">
+        <Header />
+        <Outlet />
+      </main>
     </>
   );
 }

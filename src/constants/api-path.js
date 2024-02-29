@@ -13,4 +13,8 @@ export const API_PATH = {
     CREATE: "/category",
     DELETE: (id) => `/user/${id}`,
   },
+  ADDRESS: {
+    PROVINCE: "/provinces",
+    DISTRICT: (id) => `/district/?province=${id}`,
+  },
 };
